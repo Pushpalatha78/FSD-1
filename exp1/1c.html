@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Links with Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .profiles {
+      display: flex;
+      justify-content: center;
+      gap: 40px; /* space between profiles */
+      flex-wrap: wrap; /* wraps to next line if screen is small */
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px; /* optional: rounded corners */
+      border: 2px solid #ccc;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05);
+      border-color: #0073e6;
+    }
+
+    .profile-name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .profile a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click to View Our GitHub Profiles</h2>
+
+  <div class="profiles">
+    <div class="profile">
+      <a href="https://github.com/Pushpalatha78" target="_blank">
+        <img src="my.png" alt="My Photo">
+      </a>
+      <div class="profile-name">Pushpalatha</div>
+    </div>
+
+    <div class="profile">
+      <a href="https://github.com/Tulasibikkina" target="_blank">
+        <img src="tulasi.png" alt="Tulasi Photo">
+      </a>
+      <div class="profile-name">Hema Malinya</div>
+    </div>
+
+    <div class="profile">
+      <a href="https://github.com/Bhanumadhavi" target="_blank">
+        <img src="madhavi.png" alt="Pushpalatha Photo">
+      </a>
+      <div class="profile-name">Baby Madhavi</div>
+    </div>
+
+    <div class="profile">
+      <a href="https://github.com/Sirisha826" target="_blank">
+        <img src="siri.png" alt="Sirisha Photo">
+      </a>
+      <div class="profile-name">Siri</div>
+    </div>
+  </div>
+
+</body>
+</html>
