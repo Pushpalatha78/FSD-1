@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Step-by-Step Shopping Mall Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+        .container {
+            padding: 60px 20px;
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        p {
+            color: black;
+            font-size: 18px;
+        }
+        a.btn {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background: #007BFF;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        a.btn:hover {
+            background: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body id="content">
+
+<script>
+    function loadPage(page) {
+        let html = "";
+
+        if (page === "first") {
+            html = `
+                <div class="container">
+                    <h1>Welcome to Grand Plaza Shopping Mall</h1>
+                    <p>This site is divided into 3 simple pages:<br>
+                        Image Gallery<br>
+                        About Our Mall<br>
+                        Useful Links
+                    </p>
+                    <a href="#" class="btn" onclick="loadPage('image')">Start → Go to Image Gallery</a>
+                </div>
+            `;
+        }
+        else if (page === "image") {
+            html = `
+                <div class="container">
+                    <h2>Shopping Mall Gallery</h2>
+                    <img src="https://via.placeholder.com/600x300?text=Shopping+Mall+Exterior" alt="Mall Exterior" style="margin-top:20px; border-radius:8px; max-width: 100%;">
+                    <br><br>
+                    <img src="https://via.placeholder.com/600x300?text=Food+Court" alt="Food Court" style="margin-top:20px; border-radius:8px; max-width: 100%;">
+                    <br><br>
+                    <img src="https://via.placeholder.com/600x300?text=Fashion+Stores" alt="Fashion Stores" style="margin-top:20px; border-radius:8px; max-width: 100%;">
+                    <br><br>
+                    <a href="#" class="btn" onclick="loadPage('paragraph')">Next → About Our Mall</a>
+                </div>
+            `;
+        }
+        else if (page === "paragraph") {
+            html = `
+                <div class="container">
+                    <h2>About Grand Plaza Shopping Mall</h2>
+                    <p>
+                        Grand Plaza Shopping Mall is the city's premier destination for shopping, dining, and entertainment.
+                        With over 150 stores ranging from high fashion to electronics, a sprawling food court, and a state-of-the-art cinema,
+                        we offer something for everyone. Our mall is designed for comfort, convenience, and a memorable shopping experience.
+                    </p>
+                    <a href="#" class="btn" onclick="loadPage('links')">Next → Useful Links</a>
+                </div>
+            `;
+        }
+        else if (page === "links") {
+            html = `
+                <div class="container">
+                    <h2>Useful Shopping Mall Links</h2>
+                    <p>Explore more about shopping, deals, and mall services:</p>
+                    <ul>
+                        <li><a href="https://www.mallofamerica.com" target="_blank" rel="noopener">Mall of America</a></li>
+                        <li><a href="https://www.shopify.com/blog/shopping-malls" target="_blank" rel="noopener">Shopping Mall Trends</a></li>
+                        <li><a href="https://www.retaildive.com" target="_blank" rel="noopener">Retail Dive News</a></li>
+                    </ul>
+                    <br>
+                    <a href="#" class="btn" onclick="loadPage('first')">← Back to Home</a>
+                </div>
+            `;
+        }
+
+        document.getElementById("content").innerHTML = html;
+    }
+
+    // load main page first
+    loadPage("first");
+</script>
+
+</body>
+</html>
