@@ -1,43 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fixed Tilted Background Image</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Image CSS Example</title>
   <style>
     body {
+      height: 200vh; /* Make page scrollable to see effect */
       margin: 0;
-      position: relative;
-      min-height: 200vh; /* Enough height to scroll */
       font-family: Arial, sans-serif;
-    }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 50vh;         /* Halfway down the viewport */
-      left: 50%;         /* Center horizontally */
-      transform: translate(-50%, -50%) rotate(-10deg);
-      width: 30vw;       /* Responsive width */
-      aspect-ratio: 1 / 1;
-      background-image: url('https://static.vecteezy.com/system/resources/previews/049/855/347/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg');
-      background-size: contain;
+      /* Background image settings */
+      background-image: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-118143566.jpg'); /* Example ant image */
+      background-position: center 50%; /* halfway down the page */
+      background-attachment: fixed; /* image stays fixed during scroll */
       background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.2;       /* Subtle appearance */
-      filter: blur(0.5px); /* Slight blur to fade into background */
-      pointer-events: none;
-      z-index: -1;
+      background-size: cover;
+
+      /* Tilt horizontally using transform */
+      transform: rotateX(0deg) rotateY(15deg);
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 50vh;
+      color: white;
+      text-shadow: 1px 1px 4px black;
+    }
+    p {
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 4px black;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Scroll Down the Page</h1>
-    <p>This page contains a fixed, tilted background image halfway down the viewport.</p>
-    <p>Keep scrolling to see that the image remains in place.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque...</p>
-    <p style="margin-bottom: 1000px;">(more content here to enable scrolling)</p>
-  </main>
+  <h1>Background Image Example</h1>
+  <p>Scroll to see the background remain fixed.</p>
 </body>
 </html>
