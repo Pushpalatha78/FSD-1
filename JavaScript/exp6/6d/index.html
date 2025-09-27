@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voter Eligibility Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 60%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+
+    th, td {
+      padding: 12px 18px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    td {
+      font-weight: bold;
+    }
+
+    .eligible {
+      color: green;
+    }
+
+    .not-eligible {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Voter Information</h1>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Eligibility</th>
+    </tr>
+    <tr>
+      <td id="nameCell">--</td>
+      <td id="ageCell">--</td>
+      <td id="statusCell">--</td>
+    </tr>
+  </table>
+
+  <script>
+    // Prompt for user input
+    const name = prompt("Enter your name:");
+    const age = prompt("Enter your age:");
+
+    // Determine eligibility
+    let eligibility = "";
+    if (age >= 18) {
+      eligibility = "<span class='eligible'>Eligible to Vote</span>";
+    } else {
+      eligibility = "<span class='not-eligible'>Not Eligible to Vote</span>";
+    }
+
+    // Display in table
+    document.getElementById("nameCell").textContent = name;
+    document.getElementById("ageCell").textContent = age;
+    document.getElementById("statusCell").innerHTML = eligibility;
+  </script>
+
+</body>
+</html>

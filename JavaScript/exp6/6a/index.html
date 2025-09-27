@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internal and External JavaScript Example</title>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+
+  <script>
+    // Internal JavaScript function
+    function internalFunction() {
+      alert('Hello from Internal JavaScript!');
+    }
+  </script>
+</head>
+<body>
+
+  <h1>JavaScript Embedding Example</h1>
+
+  <!-- Button to run internal JS -->
+  <button onclick="internalFunction()">Run Internal JS</button>
+
+  <!-- Button to run external JS -->
+  <button onclick="externalFunction()">Run External JS</button>
+
+</body>
+</html>

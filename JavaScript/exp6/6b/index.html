@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Output Methods</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .output-box {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Output Methods</h1>
+
+  <!-- Buttons to trigger output methods -->
+  <button onclick="showAlert()">1. Show Alert</button>
+  <button onclick="logToConsole()">2. Log to Console</button>
+  <button onclick="writeToDocument()">3. Write to Document</button>
+  <button onclick="updateInnerHTML()">4. Update innerHTML</button>
+
+  <div id="output" class="output-box">
+    Output will appear here (for innerHTML method).
+  </div>
+
+  <script>
+    // 1. Alert Box
+    function showAlert() {
+      alert("This is an alert box (output method 1).");
+    }
+
+    // 2. Console Log
+    function logToConsole() {
+      console.log("This is a message in the browser console (output method 2).");
+    }
+
+    // 3. document.write (NOT RECOMMENDED for modern use)
+    function writeToDocument() {
+      document.write("<h3>This is written using document.write (output method 3).</h3>");
+    }
+
+    // 4. innerHTML
+    function updateInnerHTML() {
+      document.getElementById("output").innerHTML = "This text was set using innerHTML (output method 4).";
+    }
+  </script>
+
+</body>
+</html>
