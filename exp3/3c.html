@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Styling Example</title>
+
+    <!-- 🔵 Internal CSS -->
+    <style>
+        /* Selector: h1, Property: color, Value: blue */
+        h1 {
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Selector: .paragraph-style, Property: font-size, Value: 16px */
+        .paragraph-style {
+            font-size: 16px;
+            color: darkgreen;
+        }
+
+        /* Selector: #footer, Property: text-align, Value: center */
+        #footer {
+            text-align: center;
+            font-style: italic;
+            color: gray;
+        }
+    </style>
+
+    <!-- 🟢 External CSS (normally linked like this) -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+
+    <!-- 🔴 Inline CSS -->
+    <h1 style="color: red; font-size: 28px;">This is a Heading (Inline Style)</h1>
+
+    <!-- 🟦 Internal CSS applied via class -->
+    <p class="paragraph-style">This paragraph is styled using internal CSS with a class selector.</p>
+
+    <!-- 🟦 Internal CSS applied via ID -->
+    <div id="footer">This is the footer styled with internal CSS using ID selector.</div>
+
+</body>
+</html>
