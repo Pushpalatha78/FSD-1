@@ -1,0 +1,95 @@
+
+/* -----------------------------
+   i. Simple Selectors
+----------------------------- */
+
+/* Element Selector */
+p {
+  color: darkblue;
+}
+
+/* ID Selector */
+#highlight {
+  background-color: yellow;
+}
+
+/* Class Selector */
+.note {
+  font-style: italic;
+  color: green;
+}
+
+/* Group Selector */
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: navy;
+}
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* -----------------------------
+   ii. Combinator Selectors
+----------------------------- */
+
+/* Descendant Selector */
+div p {
+  background-color: #f0f8ff;
+}
+
+/* Child Selector */
+ul > li {
+  color: maroon;
+}
+
+/* Adjacent Sibling Selector */
+h2 + p {
+  font-weight: bold;
+}
+
+/* General Sibling Selector */
+h2 ~ p {
+  text-decoration: underline;
+}
+
+/* -----------------------------
+   iii. Pseudo-class Selector
+----------------------------- */
+
+a:hover {
+  color: red;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+p:nth-child(odd) {
+  background-color: #eee;
+}
+
+/* -----------------------------
+   iv. Pseudo-element Selector
+----------------------------- */
+
+p::first-line {
+  font-variant: small-caps;
+}
+
+p::before {
+  content: "💡 ";
+}
+
+/* -----------------------------
+   v. Attribute Selector
+----------------------------- */
+
+input[type="text"] {
+  border: 2px solid green;
+}
+
+a[target="_blank"] {
+  color: orange;
+}

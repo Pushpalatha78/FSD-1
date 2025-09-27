@@ -1,0 +1,23 @@
+.named {
+  color: red; /* Named color */
+}
+
+.hex {
+  color: #4CAF50; /* Hexadecimal color */
+}
+
+.rgb {
+  color: rgb(255, 165, 0); /* RGB color */
+}
+
+.rgba {
+  color: rgba(0, 0, 255, 0.6); /* RGBA with opacity */
+}
+
+.hsl {
+  color: hsl(240, 100%, 50%); /* HSL color */
+}
+
+.hsla {
+  color: hsla(120, 100%, 25%, 0.7); /* HSLA with opacity */
+}
