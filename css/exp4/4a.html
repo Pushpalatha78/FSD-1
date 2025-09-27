@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Examples</title>
+
+  <style>
+    /* -----------------------------
+       i. Simple Selectors
+    ----------------------------- */
+    
+    /* Element Selector */
+    p {
+      color: darkblue;
+    }
+
+    /* ID Selector */
+    #highlight {
+      background-color: yellow;
+    }
+
+    /* Class Selector */
+    .note {
+      font-style: italic;
+      color: green;
+    }
+
+    /* Group Selector */
+    h1, h2, h3 {
+      font-family: Arial, sans-serif;
+      color: navy;
+    }
+
+    /* Universal Selector */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* -----------------------------
+       ii. Combinator Selectors
+    ----------------------------- */
+
+    /* Descendant Selector */
+    div p {
+      background-color: #f0f8ff;
+    }
+
+    /* Child Selector */
+    ul > li {
+      color: maroon;
+    }
+
+    /* Adjacent Sibling Selector */
+    h2 + p {
+      font-weight: bold;
+    }
+
+    /* General Sibling Selector */
+    h2 ~ p {
+      text-decoration: underline;
+    }
+
+    /* -----------------------------
+       iii. Pseudo-class Selector
+    ----------------------------- */
+
+    a:hover {
+      color: red;
+    }
+
+    li:first-child {
+      font-weight: bold;
+    }
+
+    p:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    /* -----------------------------
+       iv. Pseudo-element Selector
+    ----------------------------- */
+
+    p::first-line {
+      font-variant: small-caps;
+    }
+
+    p::before {
+      content: "💡 ";
+    }
+
+    /* -----------------------------
+       v. Attribute Selector
+    ----------------------------- */
+
+    input[type="text"] {
+      border: 2px solid green;
+    }
+
+    a[target="_blank"] {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selector Demo</h1>
+
+  <!-- Simple Selectors -->
+  <p>This is a paragraph using element selector.</p>
+  <p id="highlight">This paragraph uses an ID selector.</p>
+  <p class="note">This paragraph uses a class selector.</p>
+
+  <!-- Group Selector -->
+  <h2>Grouped heading</h2>
+  <h3>Another grouped heading</h3>
+
+  <!-- Combinator Selectors -->
+  <div>
+    <p>Descendant of div (styled)</p>
+  </div>
+
+  <ul>
+    <li>First item (child)</li>
+    <li>Second item</li>
+  </ul>
+
+  <h2>Sibling Example</h2>
+  <p>Adjacent sibling of h2 (styled bold)</p>
+  <p>General sibling of h2 (styled underline)</p>
+
+  <!-- Pseudo-class -->
+  <a href="https://example.com" target="_blank">Hover me (pseudo-class)</a>
+  <ul>
+    <li>First child list item</li>
+    <li>Second item</li>
+  </ul>
+
+  <!-- Pseudo-element -->
+  <p>This paragraph demonstrates ::first-line and ::before pseudo-elements.</p>
+
+  <!-- Attribute Selector -->
+  <input type="text" placeholder="Name">
+  <input type="submit" value="Submit">
+
+</body>
+</html>
