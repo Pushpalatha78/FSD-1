@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Fixed Tilted Background Image</title>
-<style>
-  body {
-    margin: 0;
-    position: relative;
-    min-height: 200vh; /* enough height to scroll */
-    font-family: Arial, sans-serif;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixed Tilted Background Image</title>
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+      min-height: 200vh; /* Enough height to scroll */
+      font-family: Arial, sans-serif;
+    }
 
-  body::before {
-    content: "";
-    position: fixed;
-    top: 50vh;        /* halfway down viewport */
-    left: 50%;        /* center horizontally */
-    transform: translate(-50%, -50%) rotate(-10deg); /* center & tilt */
-    width: 300px;     /* image width */
-    height: 300px;    /* image height */
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAECAMAAABo3cf9AAAAMFBMVEX///8AAADf399XV1drb22cnJzo6Oj29vZ4eHi9vb3Pz8+np6ejo6N+fn4fHx8qKirU1NSVlZUrKyvt7e2Tk5PawZZVAAABEklEQVR42u3QMQEAAAjDsOPf+ZI23CjNnQv+AFfrd3dc7HQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOANcBbAwARxU8FgAAAABJRU5ErkJggg==');
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: -1;
-  }
-</style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50vh;         /* Halfway down the viewport */
+      left: 50%;         /* Center horizontally */
+      transform: translate(-50%, -50%) rotate(-10deg);
+      width: 30vw;       /* Responsive width */
+      aspect-ratio: 1 / 1;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/049/855/347/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.2;       /* Subtle appearance */
+      filter: blur(0.5px); /* Slight blur to fade into background */
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
   <main>

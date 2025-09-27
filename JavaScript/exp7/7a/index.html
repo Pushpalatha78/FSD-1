@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Using the Document Object</h1>
+
+  <p id="info">Click the button to learn about this page.</p>
+  <button onclick="showPageInfo()">Show Page Info</button>
+
+  <button onclick="addNewElement()">Add New Element</button>
+
+  <button onclick="changeTitle()">Change Document Title</button>
+
+  <script>
+    function showPageInfo() {
+      const info = document.getElementById("info");
+
+      // Using document properties
+      const title = document.title;
+      const url = document.URL;
+      const lastModified = document.lastModified;
+
+      info.innerHTML = `
+        <strong>Document Title:</strong> ${title} <br>
+        <strong>URL:</strong> ${url} <br>
+        <strong>Last Modified:</strong> ${lastModified}
+      `;
+    }
+
+    function addNewElement() {
+      // Create a new paragraph and add to body
+      const newPara = document.createElement("p");
+      newPara.textContent = "This paragraph was added using document.createElement()";
+      document.body.appendChild(newPara);
+    }
+
+    function changeTitle() {
+      // Change the document title
+      const newTitle = prompt("Enter a new title for this page:");
+      if (newTitle) {
+        document.title = newTitle;
+        alert("Title changed! Look at the browser tab.");
+      }
+    }
+  </script>
+</body>
+</html>
